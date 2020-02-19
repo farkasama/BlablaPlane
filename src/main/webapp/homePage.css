@@ -1,0 +1,31 @@
+body{
+	background-image:url("image/planebeau.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.listFlight{
+	background-color:white;
+	border-radius: 25px;
+	padding: 10px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+#recherche{
+	margin-top: 100px;
+	padding:50px 50px 50px 50px;
+}
+
+#notfound{
+	display:none;
+	color:white;
+}
+
+.connected {
+	display: none ;
+}
+
+#logOut{
+	display:none;
+}

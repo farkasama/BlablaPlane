@@ -1,0 +1,24 @@
+
+.champs {
+ height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  border-width: medium;
+  padding-left: 3%;
+}
+
+.intro{
+    background-color: lightgrey;
+}
+
+#lienRecherche,#logOut,#lienReservation,#lienpost{
+    display: none;
+}
+
+.listFlight{
+	background-color:white;
+	border-radius: 25px;
+	padding: 10px;
+	margin-top:25px;
+	margin-bottom:25px;
+}

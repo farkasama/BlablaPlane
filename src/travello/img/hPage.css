@@ -1,0 +1,61 @@
+input.champs {
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  border-width: medium;
+  padding-left: 3%;
+}
+
+a.btn {
+  width: 200px;
+  height: 30px;
+}
+
+div.centre {
+  padding-bottom:20%;
+  background-image: url("plane.jpg");
+  background-size: cover;
+  text-align: center;
+  color: white
+}
+
+h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-family: serif;
+}
+
+img.chmaps {
+  position: absolute;
+  padding-left: 1%;
+  padding-top: 0.7%
+}
+
+section {
+  background-color: whiteSmoke;
+  padding-left: 10%;
+}
+input {
+  border: 3px solid #555;
+  padding-left: 1%;
+}
+
+footer {
+  background-color: LightSkyBlue;
+  opacity: 0.8;
+}
+
+section.footer {
+  background-color: SteelBlue;
+  color: white;
+}
+div.copyright {
+  text-align: right;
+}
+a {
+  color: black;
+  font-weight: bold;
+
+}

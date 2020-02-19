@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>home page</title>
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		</script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+		</script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+		</script>
+		
+		<script type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
+		</script>
+		<script type="text/javascript" src="homePage.js">
+		</script>
+		<link rel="stylesheet" type="text/css" href="homePage.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="">Blablaplane</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="#"> <img src="image/facebook-logo.png"></a></li>
+						<li><a href="#"> <img src="image/twitter.png"></a></li>
+						<li><a href="#"> <img src="image/instagram.png"></a></li>
+						<!--<li class="passenger connected"><a href="#" id="lienRecherche">search flight</a></li>
+						<li class="passenger connected"><a href="#" id="">my reservations</a></li>
+						<li class="pilot connected"><a href="#" data-toggle="modal"
+							data-target="#postFlight">book flight</a></li>-->
+					</ul>
+					<button class="btn navbar-btn passenger connected" id="lienRecherche">search flight</button>
+					<button class="btn navbar-btn passenger connected" id="lienReservation">my reservations</button>
+					<button class="btn navbar-btn pilot connected" data-toggle="modal"
+							data-target="#postFlight">book flight</button>
+					<ul class="nav navbar-nav navbar-right">
+						<li id="sin"><a href="#" data-toggle="modal"
+							data-target="#signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li id="lin"><a href="#" data-toggle="modal"
+							data-target="#signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li id="logOut"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
+			</nav> 
+		</header>
+		<div class="modal fade" id="signin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>sign in</h4>
+					</div>
+					<div class="modal-body">
+						<p class="signup-sucess"></p>
+						<p>	don't have an account? <a href="#" data-dismiss="modal"
+								data-target="#signup" data-toggle="modal">Sign up</a>
+						</p>
+						<div id="formsignin">
+							<h4>I am?</h4>
+							<input type="radio" name="type" value="pilot"> Pilot <input
+								type="radio" name="type" value="passenger" checked>
+								Passenger <br> <br> 
+							<input class="champs" type="text" id="mailog" name="login" required
+								placeholder="email*">
+							<br>
+							<br>
+							<input class="champs" id="logpass" type="password" name="password" required
+								placeholder="password*">
+							<br>
+							<br>
+							<div class="error-form">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close
+								</button>
+								<button type="submit" id="connectuser" class="btn btn-primary">Sign in</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="modal fade" id="signup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>sign up</h4>
+				</div>
+				<div class="modal-body">
+					<p>	Already a me mber? <a href="#" data-dismiss="modal"
+							data-target="#signin" data-toggle="modal">Sign in</a>
+					</p>
+					<div id="formsignup">
+						<h4>I am?</h4>
+						<input type="radio" name="type" value="pilot"> Pilot 
+						<input type="radio" name="type" value="passenger" checked>
+							Passenger
+						<br>
+						<br> 
+						<input class="champs" type="text" id="firstName"
+							name="fName" required placeholder="First Name*"> 
+						<br>
+						<br>
+						<input class="champs" type="text" id="lastName" name="lName" required
+						placeholder="Last Name*">
+						<br>
+						<br>
+						<input class="champs" type="email" id="mail" name="email" required
+							placeholder="Email*">
+						<br>
+						<br> 
+						<input class="champs" type="password" id="password" name="password" required
+							placeholder="Password*"> <br> <br> 
+						<input class="champs" type="password" id="#passwordc" name="cPassword" required
+							placeholder="Confirm Password*">
+						<br>
+						<br>
+						<div class="error-form">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="button" id="createUser" class="btn btn-primary">Sign Up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="postFlight" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>post flight</h4>
+					</div>
+					<div class="modal-body">
+						<div id="formpostFlight">
+							<h4>Type?</h4>
+							<input type="radio" name="type" id="travelpost" value="travel" checked> 
+								Travel 
+							<input type="radio" name="type" id="localpost" value="local">
+								Local Flight 
+							<br>
+							<br>
+							date <input class="champs" type="date" id="datepost" required>
+							<br>
+							<br>
+							Time <input type="time" id="timepost" value="00:00">
+							<br>
+							<br>
+							departure <input class="champs" type="text" id="departurepost" required
+								placeholder="departure"> 
+							<br>
+							<br>
+							arrival <input class="champs" type="text" id="arrivalpost"
+								required placeholder="arrival">
+							<br>
+							<br>
+							travel time <input class="champs" type="number" id="traveltimepost"
+								required placeholder="travel time">
+							<br>
+							<br>
+							price <input class="champs" type="number" id="pricepost" required
+								placeholder="price $$">
+							<br>
+							<br>
+							number of seat <input class="champs" type="number" id="placepost" required
+								placeholder="number of seat">
+							<br>
+							<br>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button id="postflight" class="btn btn-primary">Post</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="container-fluid passenger" id="recherche">
+			<div class="row">
+				<div align="center">
+					<h1>BLABLAPLANE</h1>
+					<h4>share your flight!</h4>
+				</div>
+			</div>
+			<br>
+			<div class="row" id="formsearch">
+				<div align="center">
+					<div class="form-inline">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							<input type="date" class="form-control" id="datesearch">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+							<input type="text" class="form-control" id="departuresearch" placeholder="departure">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></span>
+							<input type="text" class="form-control" id="arrivalsearch" placeholder="arrival">
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" id="travelsearch">travel</label>
+							<br>
+							<label><input type="checkbox" id="localsearch">local</label>
+						</div>
+						<button id="search" class="btn btn-default">search</button>
+					</div> 
+				</div>
+			</div>
+			<br>
+			<div class="col-sm-2 col-sm-offset-5">
+				<h1 id="notfound">no flights</h1>
+			</div>
+			<script id="ajoutsearch" type="text/template">
+				<div class="listFlight col-sm-6 col-sm-offset-3">
+					<div class="col-sm-8">
+						<h4><%=depart%> ▶ <%=arrive%></h4>
+						<hr>
+						<h4><%=date%> <%=time%></h4>
+						<hr>
+						
+						<hr>
+						<h4>Price : <%=price%> €</h4>
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3><%=place%> seat left</h3>
+						<p><input  type="number" value="0" min="0" max=<%=place%>></p>
+						<p><button type="button" onclick="bookFlight('<%=idf%>')" 
+							class="btn btn-primary btn-lg">book</button></p>
+					</div>
+				</div>
+			</script>
+			<div id="resultsearch">	</div>
+		</div>
+		
+	</body>
+</html>

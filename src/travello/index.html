@@ -1,0 +1,734 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BLABLAPLANE</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+      <link rel="stylesheet" href="hPage.css">  
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<nav class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="#">Blablaplane</a></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li id="lienRecherche"><a href="#">Find</a></li>
+									<li id="lienReservation"><a href="#">Reservations</a></li>
+									<li id="lienpost"><a href="#" data-toggle="modal"
+							             data-target="#postFlight">Post</a></li>
+                                    <li id="sin"><a href="#" data-toggle="modal"
+							             data-target="#signin">Sign in</a></li>
+                                    <li  id="sup"><a href="#" data-toggle="modal"
+							             data-target="#signup">Sign up</a></li>
+                                    <li><a href="#" id="logOut">Log out</a></li>
+								</ul>
+							</nav>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+	</header>
+
+    <!-- Modal -->
+    
+    <div class="modal fade" id="signin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>sign in</h4>
+					</div>
+					<div class="modal-body">
+						<p class="signup-sucess"></p>
+						<p>	don't have an account? <a href="#" data-dismiss="modal"
+								data-target="#signup" data-toggle="modal">Sign up</a>
+						</p>
+						<div id="formsignin">
+							<h4>I am?</h4>
+							<input type="radio" name="type" value="pilot"> Pilot <input
+								type="radio" name="type" value="passenger" checked>
+								Passenger <br> <br> 
+							<input class="champs" type="text" id="mailog" name="login" required
+								placeholder="email*">
+							<br>
+							<br>
+							<input class="champs" id="logpass" type="password" name="password" required
+								placeholder="password*">
+							<br>
+							<br>
+							<div class="error-form">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close
+								</button>
+								<button type="submit" id="connectuser" class="btn btn-primary">Sign in</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="modal fade" id="signup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>sign up</h4>
+				</div>
+				<div class="modal-body">
+					<p>	Already a member? <a href="#" data-dismiss="modal"
+							data-target="#signin" data-toggle="modal">Sign in</a>
+					</p>
+					<div id="formsignup">
+						<h4>I am?</h4>
+						<input type="radio" name="type" value="pilot"> Pilot 
+						<input type="radio" name="type" value="passenger" checked>
+							Passenger
+						<br>
+						<br> 
+						<input class="champs" type="text" id="firstName"
+							name="fName" required placeholder="First Name*"> 
+						<br>
+						<br>
+						<input class="champs" type="text" id="lastName" name="lName" required
+						placeholder="Last Name*">
+						<br>
+						<br>
+						<input class="champs" type="email" id="mail" name="email" required
+							placeholder="Email*">
+						<br>
+						<br> 
+						<input class="champs" type="password" id="password" name="password" required
+							placeholder="Password*"> <br> <br> 
+						<input class="champs" type="password" id="#passwordc" name="cPassword" required
+							placeholder="Confirm Password*">
+						<br>
+						<br>
+						<div class="error-form">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="button" id="createUser" class="btn btn-primary">Sign Up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="postFlight" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>post flight</h4>
+					</div>
+					<div class="modal-body">
+						<div id="formpostFlight">
+							<h4>Type?</h4>
+							<input type="radio" name="type" id="travelpost" value="travel" checked> 
+								Travel 
+							<input type="radio" name="type" id="localpost" value="local">
+								Local Flight 
+							<br>
+							<br>
+							<input class="champs" type="date" id="datepost" required>
+							<br>
+							<br>
+							<input type="time" id="timepost" value="00:00">
+							<br>
+							<br>
+							<input class="champs" type="text" id="departurepost" required
+								placeholder="departure"> 
+							<br>
+							<br>
+							<input class="champs" type="text" id="arrivalpost"
+								required placeholder="arrival">
+							<br>
+							<br>
+							<input class="champs" type="number" id="traveltimepost"
+								required placeholder="travel time">
+							<br>
+							<br>
+							<input class="champs" type="number" id="pricepost" required
+								placeholder="price $$">
+							<br>
+							<br>
+							<input class="champs" type="number" id="placepost" required
+								placeholder="number of seat">
+							<br>
+							<br>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button id="postflight" class="btn btn-primary">Post</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+    <!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>share your flight!</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Search for your trip</div>
+						<div class="home_search_content">
+							<div class="home_search_form" id="home_search_form">
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input id="datesearch" type="date" class="search_input search_input_2">
+									<input id="departuresearch" type="text" class="search_input search_input_3"    placeholder="Departure">
+									<input id="arrivalsearch" type="text" class="search_input search_input_4"  placeholder="Arrival">
+                                    <div class="checkbox">
+							         <div class="row"> <label><input type="checkbox" id="travelsearch">travel</label></div>
+							         <div class="row"><label><input type="checkbox" id="localsearch">local</label></div>
+						              </div>
+									<button id="search" class="home_search_button">search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="resultsearch">
+    </div>
+	<!-- Intro -->
+    <script id="ajoutsearch" type="text/template">
+        <div class="intro">
+            <div class="intro_background" style="background-image:url(images/intro.png)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="intro_container">
+                            <div class="row">
+                                <div class="listFlight col-sm-8 col-sm-offset-2">
+                                    <div class="col-sm-8">
+                                        <h4><%=depart%> ▶ <%=arrive%></h4>
+                                        <hr>
+                                        <h4><%=date%> <%=time%></h4>
+                                     
+                                        <hr>
+                                        <h4>Price : <%=price%> €</h4>
+                                    </div>
+                                    <div class="col-sm-4" align="center">
+                                        <h3><%=place%> seat left</h3>
+                                        <p><input  type="number" id="nbPlace" value="0" min="0" max=<%=place%>></p>
+                                        <p><button type="button" onclick="bookFlight('<%=idf%>')" 
+                                            class="btn btn-primary btn-lg">book</button></p>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </script>
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer_1.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_subtitle">Join our database NOW!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/sign.svg" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Office Landline: +33 62 93 05 099</li>
+										<li>Mobile: +33 76 70 03 478</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/trekking.svg" alt=""></div>
+								<div class="footer_contact_title">come & drop by</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>5 Rue Thomas Mann, 75013 Paris</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+                        <div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/around.svg" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>flight@blablaplane.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+    
+    
+    
+    
+
+
+    
+    
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript" src="homePage.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BLABLAPLANE</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+      <link rel="stylesheet" href="hPage.css">  
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<nav class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="#">Blablaplane</a></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li id="lienRecherche"><a href="#">Find</a></li>
+									<li id="lienReservation"><button onclick="mesReservation()">Reservations</button></li>
+									<li id="lienpost"><a href="#" data-toggle="modal"
+							             data-target="#postFlight">Post</a></li>
+                                    <li id="sin"><a href="#" data-toggle="modal"
+							             data-target="#signin">Sign in</a></li>
+                                    <li  id="sup"><a href="#" data-toggle="modal"
+							             data-target="#signup">Sign up</a></li>
+                                    <li><a href="#" id="logOut">Log out</a></li>
+								</ul>
+							</nav>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+	</header>
+
+    <!-- Modal -->
+    
+    <div class="modal fade" id="signin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>sign in</h4>
+					</div>
+					<div class="modal-body">
+						<p class="signup-sucess"></p>
+						<p>	don't have an account? <a href="#" data-dismiss="modal"
+								data-target="#signup" data-toggle="modal">Sign up</a>
+						</p>
+						<div id="formsignin">
+							<h4>I am?</h4>
+							<input type="radio" name="type" value="pilot"> Pilot <input
+								type="radio" name="type" value="passenger" checked>
+								Passenger <br> <br> 
+							<input class="champs" type="text" id="mailog" name="login" required
+								placeholder="email*">
+							<br>
+							<br>
+							<input class="champs" id="logpass" type="password" name="password" required
+								placeholder="password*">
+							<br>
+							<br>
+							<div class="error-form">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close
+								</button>
+								<button type="submit" id="connectuser" class="btn btn-primary">Sign in</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="modal fade" id="signup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>sign up</h4>
+				</div>
+				<div class="modal-body">
+					<p>	Already a member? <a href="#" data-dismiss="modal"
+							data-target="#signin" data-toggle="modal">Sign in</a>
+					</p>
+					<div id="formsignup">
+						<h4>I am?</h4>
+						<input type="radio" name="type" value="pilot"> Pilot 
+						<input type="radio" name="type" value="passenger" checked>
+							Passenger
+						<br>
+						<br> 
+						<input class="champs" type="text" id="firstName"
+							name="fName" required placeholder="First Name*"> 
+						<br>
+						<br>
+						<input class="champs" type="text" id="lastName" name="lName" required
+						placeholder="Last Name*">
+						<br>
+						<br>
+						<input class="champs" type="email" id="mail" name="email" required
+							placeholder="Email*">
+						<br>
+						<br> 
+						<input class="champs" type="password" id="password" name="password" required
+							placeholder="Password*"> <br> <br> 
+						<input class="champs" type="password" id="#passwordc" name="cPassword" required
+							placeholder="Confirm Password*">
+						<br>
+						<br>
+						<div class="error-form">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="button" id="createUser" class="btn btn-primary">Sign Up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="postFlight" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>post flight</h4>
+					</div>
+					<div class="modal-body">
+						<div id="formpostFlight">
+							<h4>Type?</h4>
+							<input type="radio" name="type" id="travelpost" value="travel" checked> 
+								Travel 
+							<input type="radio" name="type" id="localpost" value="local">
+								Local Flight 
+							<br>
+							<br>
+							<input class="champs" type="date" id="datepost" required>
+							<br>
+							<br>
+							<input type="time" id="timepost" value="00:00">
+							<br>
+							<br>
+							<input class="champs" type="text" id="departurepost" required
+								placeholder="departure"> 
+							<br>
+							<br>
+							<input class="champs" type="text" id="arrivalpost"
+								required placeholder="arrival">
+							<br>
+							<br>
+							<input class="champs" type="number" id="traveltimepost"
+								required placeholder="travel time">
+							<br>
+							<br>
+							<input class="champs" type="number" id="pricepost" required
+								placeholder="price $$">
+							<br>
+							<br>
+							<input class="champs" type="number" id="placepost" required
+								placeholder="number of seat">
+							<br>
+							<br>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button id="postflight" class="btn btn-primary">Post</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+    <!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>share your flight!</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Search for your trip</div>
+						<div class="home_search_content">
+							<div class="home_search_form" id="home_search_form">
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input id="datesearch" type="date" class="search_input search_input_2">
+									<input id="departuresearch" type="text" class="search_input search_input_3"    placeholder="Departure">
+									<input id="arrivalsearch" type="text" class="search_input search_input_4"  placeholder="Arrival">
+                                    <div class="checkbox">
+							         <div class="row"> <label><input type="checkbox" id="travelsearch">travel</label></div>
+							         <div class="row"><label><input type="checkbox" id="localsearch">local</label></div>
+						              </div>
+									<button id="search" class="home_search_button">search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="resultsearch">
+    </div>
+	<!-- Intro -->
+    <script id="ajoutsearch" type="text/template">
+        <div class="intro">
+            <div class="intro_background" style="background-image:url(images/intro.png)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="intro_container">
+                            <div class="row">
+                                <div class="listFlight col-sm-8 col-sm-offset-2">
+                                    <div class="col-sm-8">
+                                        <h4><%=depart%> ▶ <%=arrive%></h4>
+                                        <hr>
+                                        <h4><%=date%> <%=time%></h4>
+                                     
+                                        <hr>
+                                        <h4>Price : <%=price%> €</h4>
+                                    </div>
+                                    <div class="col-sm-4" align="center">
+                                        <h3><%=place%> seat left</h3>
+                                        <p><input  type="number" id="nbPlace" value="0" min="0" max=<%=place%>></p>
+                                        <p><button type="button" onclick="bookFlight('<%=idf%>')" 
+                                            class="btn btn-primary btn-lg">book</button></p>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </script>
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer_1.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_subtitle">Join our database NOW!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/sign.svg" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Office Landline: +33 62 93 05 099</li>
+										<li>Mobile: +33 76 70 03 478</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/trekking.svg" alt=""></div>
+								<div class="footer_contact_title">come & drop by</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>5 Rue Thomas Mann, 75013 Paris</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+                        <div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="images/around.svg" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>flight@blablaplane.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+    
+    
+    
+    
+
+
+    
+    
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript" src="homePage.js"></script>
+</body>
+>>>>>>> master
+</html>

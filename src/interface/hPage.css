@@ -1,0 +1,161 @@
+html{
+	overflow-x:hidden;
+}
+
+.champs {
+ height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  border-width: medium;
+  padding-left: 3%;
+}
+
+#notfound,#noreservation,#nopost{
+    display: none;
+}
+
+.listFlight,#notfound,#noreservation,#nopost{
+	background-color:#f2f2f2;
+	padding: 10px;
+	margin-top:15px;
+	margin-bottom:15px;
+    color: black;
+}
+
+#nbPlace{
+    width:35%;
+    height: 40px;
+}
+
+.reserver{
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+    border-color:#2C2E3E;
+    float: right
+}
+.reserver:hover{
+    background-color: #2C2E3E;
+    color:white;
+}
+
+.maps{
+    width: 100%;
+    border-radius: 5px;
+    height: 55px;
+}
+
+#mapid { 
+    height: 400px;
+    width: 100%px;
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#search{
+    background-color: lightgray;
+    width: 21%;
+}
+
+
+nav {
+  /*background: rgba(50, 50, 50, 0.75)!important;
+  border-color: rgba(50, 50, 50, 0.60)!important;*/
+  z-index: -1000;
+}
+
+
+.logo{
+  color:rgb(30,144,255)!important;
+}
+
+.links{
+  padding-right: 5px;
+}
+
+.navbar-header {
+   padding-left: 5px;
+}
+
+.navbar-header > a {
+   height: auto;
+   width: auto;
+   margin: auto;
+   padding-top: 19.5px;
+   padding-bottom: 19.5px;
+   line-height: 27px;
+   font-size: 21px;
+   font-weight:800px;
+   color: whitesmoke!important;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: whitesmoke!important;
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: whitesmoke!important;
+  font-size: 110%;
+  font-weight: 800;
+}
+
+.navbar-nav li {
+  display: inline-block!important;
+  /*font-size: 18px;*/
+  text-align: center;
+  padding-right: 15px;
+}
+
+@media (min-width: 750px) {
+ .navbar-nav > li > a {
+   padding-top: 19.5px;
+   padding-bottom: 19.5px;
+   line-height: 27px;
+ }
+}
+
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.header_content
+{
+	width: 100%;
+	height: 148px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.header_content_inner
+{
+	width: 100%;
+}
+.logo a
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 0.75;
+}
+
+
+.navbar-default.scrolled {
+    background: rgba(50, 50, 50, 0.75)!important;
+    color: #ff5f5f !important; 
+}
+
